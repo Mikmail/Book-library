@@ -1,0 +1,132 @@
+nav {
+  background-color: rgba(252, 111, 111, 0.849);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav button {
+  background-color: rgb(0, 89, 119);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ul#book-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+ul {
+  list-style-type:  none;
+}
+
+.book-card {
+  color: white;
+  width: 290px;
+  height: 200px;
+  margin: 20px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  background-color: rgb(68, 45, 199);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.book-card p {
+  margin: 0;
+}
+
+.book-card .title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.book-card .author {
+  font-size: 18px;
+}
+
+.book-card .pages {
+  font-size: 14px;
+}
+
+.book-card .read {
+  font-size: 14px;
+  color: rgb(0, 199, 0);
+}
+
+.book-card .not-read {
+  font-size: 14px;
+  color: red;
+}
+
+.remove-book {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#book-form {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 400px;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  }
+  
+#book-form h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  }
+  
+#book-form label, #book-form input[type="checkbox"] {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+  
+#book-form input[type="text"], #book-form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.remove-btn {
+  background-color: rgb(255, 0, 0);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 10px;
+  }
