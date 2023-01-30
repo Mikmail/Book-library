@@ -11,12 +11,14 @@ document.getElementById("book-form").addEventListener("submit", function(event) 
   let author = document.getElementById("author-input").value;
   let pages = document.getElementById("pages-input").value;
   let read = document.getElementById("read-input").checked;
+  let imageURL = document.getElementById("image-url-input").value;
 
   let newBook = {
     title: title,
     author: author,
     pages: pages,
-    read: read
+    read: read,
+    imageURL: imageURL
   };
 
   books.push(newBook);
@@ -33,6 +35,13 @@ function displayBooks() {
 
     let bookItem = document.createElement("li");
     bookItem.classList.add("book-card");
+
+    let image = document.createElement("img");
+    image.src = book.imageURL;
+    image.style.width = "70px";
+    image.style.height = "100px";
+    image.alt = "Book cover";
+    bookItem.appendChild(image);
 
     let title = document.createElement("p");
     title.classList.add("title");
@@ -63,11 +72,13 @@ function displayBooks() {
 
     bookItem.addEventListener("click", function() {
       book.read = !book.read;
-      displayBooks();
-    });
-
-    removeBtn.addEventListener("click", function() {
-      books.splice(i, 1);
+      if (book.read) {
+        bookItem.style.backgroundColor = 'rgb(0, 255, 0)';
+        bookItem.style.color = 'white';
+      } else {
+        bookItem.style.backgroundColor = 'rgb(255, 183, 0)';
+        bookItem.style.color = 'black';
+      }
       displayBooks();
     });
   }
